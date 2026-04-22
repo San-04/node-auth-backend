@@ -4,9 +4,9 @@ Esta es una API REST profesional construida con **Node.js** y **Express**, utili
 
 ## 🚀 Tecnologías utilizadas
 
-- **Runtime:** Node.js (v20+)
+- **Runtime:** Node.js (v24+)
 - **Framework:** Express.js
-- **Base de Datos:** MySQL 8.0
+- **Base de Datos:** MySQL 8.0.46
 - **Gestor de Paquetes:** pnpm
 - **Seguridad:** JSON Web Tokens (JWT)
 - **Documentación:** Swagger UI (OpenAPI 3.0)

@@ -1,4 +1,4 @@
-FROM node:20-slim
+FROM node:24.15.0-slim
 
 # Instalar pnpm globalmente
 ENV PNPM_HOME="/pnpm"
