@@ -14,7 +14,6 @@ class UserController {
 
   async create(req, res) {
     try {
-      console.log("Creating user with data:", req.body);
       const userId = await this.usermodel.create(req.body);
       if (!userId) {
         return res
