@@ -1,9 +1,9 @@
-const {
+import {
   mysql_execute_read,
   mysql_execute_insert,
   mysql_execute_update,
   mysql_execute_delete,
-} = require("../config/db");
+} from "../config/db.js";
 
 class UserModel {
   async findAll() {
@@ -43,4 +43,4 @@ class UserModel {
   }
 }
 
-module.exports = new UserModel();
+export default new UserModel();

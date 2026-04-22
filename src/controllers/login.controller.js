@@ -1,5 +1,5 @@
-const LoginModel = require("../models/login.model");
-const { generateToken } = require("../utils/jwt.handle");
+import LoginModel from "../models/login.model.js";
+import { generateToken } from "../utils/jwt.handle.js";
 
 class LoginController {
   async login(req, res) {
@@ -38,4 +38,4 @@ class LoginController {
   }
 }
 
-module.exports = new LoginController();
+export default new LoginController();

@@ -1,4 +1,4 @@
-const { verifyToken } = require("../utils/jwt.handle");
+import { verifyToken } from "../utils/jwt.handle.js";
 
 const checkJwt = (req, res, next) => {
   try {
@@ -17,4 +17,4 @@ const checkJwt = (req, res, next) => {
   }
 };
 
-module.exports = { checkJwt };
+export { checkJwt };

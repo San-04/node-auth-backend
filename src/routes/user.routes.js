@@ -1,7 +1,8 @@
-const express = require("express");
+import express from "express";
+import userController from "../controllers/user.controller.js";
+import { checkJwt } from "../middlewares/auth.middleware.js";
+
 const router = express.Router();
-const userController = require("../controllers/user.controller");
-const { checkJwt } = require("../middlewares/auth.middleware");
 
 /**
  * @swagger
@@ -152,4 +153,4 @@ router.delete("/delete_user/:id", checkJwt, (req, res) =>
   userController.delete(req, res),
 );
 
-module.exports = router;
+export default router;

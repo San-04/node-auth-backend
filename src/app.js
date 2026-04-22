@@ -1,7 +1,8 @@
-const express = require("express");
-const swaggerUi = require("swagger-ui-express");
-const swaggerJsdoc = require("swagger-jsdoc");
-require("dotenv").config();
+import express from "express";
+import swaggerUi from "swagger-ui-express";
+import swaggerJsdoc from "swagger-jsdoc";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 app.use(express.json());
@@ -33,8 +34,8 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // --- REGISTRO DE RUTAS ---
-const loginRoutes = require("./routes/login.routes");
-const userRoutes = require("./routes/user.routes");
+import loginRoutes from "./routes/login.routes.js";
+import userRoutes from "./routes/user.routes.js";
 
 app.use("/api/login", loginRoutes);
 app.use("/api/users", userRoutes);

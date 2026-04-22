@@ -66,5 +66,5 @@ class UserController {
   }
 }
 
-const UserModel = require("../models/user.model");
-module.exports = new UserController(UserModel);
+import UserModel from "../models/user.model.js";
+export default new UserController(UserModel);

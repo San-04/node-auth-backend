@@ -1,4 +1,4 @@
-const mysql = require("mysql2/promise");
+import mysql from "mysql2/promise";
 
 // Creamos el Pool una sola vez.
 // El Pool maneja automáticamente abrir y cerrar conexiones por nosotros.
@@ -66,7 +66,7 @@ const mysql_execute_delete = async (sql, params = []) => {
 };
 
 // Exportamos las funciones individualmente
-module.exports = {
+export {
   mysql_execute_read,
   mysql_execute_insert,
   mysql_execute_update,

@@ -1,4 +1,4 @@
-const { mysql_execute_read } = require("../config/db");
+import { mysql_execute_read } from "../config/db.js";
 
 class LoginModel {
   async findByEmail(email) {
@@ -8,4 +8,4 @@ class LoginModel {
   }
 }
 
-module.exports = new LoginModel();
+export default new LoginModel();
