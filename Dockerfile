@@ -11,11 +11,11 @@ WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 
 # Instalar dependencias
-RUN pnpm install
+RUN pnpm install --ignore-scripts
 
 # Copiar el resto del código
 COPY . .
 
 EXPOSE 3000
 
-CMD ["pnpm", "start"]
+CMD ["pnpm", "dev"]
