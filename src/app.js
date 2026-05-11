@@ -36,8 +36,10 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 // --- REGISTRO DE RUTAS ---
 import loginRoutes from "./routes/login.routes.js";
 import userRoutes from "./routes/user.routes.js";
+import stripeRoutes from "./routes/stripe.routes.js";
 
 app.use("/api/login", loginRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/stripe", stripeRoutes);
 
 app.listen(process.env.PORT || 3000, () => console.log("Servidor listo"));
